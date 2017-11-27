@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<class name="com.appstek.Dao.Employee"   table="MavenEmployee">
+ 	 <id name="ename" column="ename" length="25"></id>
+ 	 <property name="epwd" column="epwd" length="35"/>
+ 	</class>
+ </hibernate-mapping>
