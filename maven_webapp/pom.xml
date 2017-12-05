@@ -46,7 +46,7 @@
                  <path>/</path>
                  </configuration>
            </plugin> -->
-           
+          <!-- To install this project in local or remote server we have to rin the -X tomcat7:deploy or undeploy and configure remote server credentials in pom and settings.xml as well --> 
            <!-- 
               This is my Local Credentials 
            -->
