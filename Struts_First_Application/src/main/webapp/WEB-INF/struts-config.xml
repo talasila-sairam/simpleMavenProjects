@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+	   <form-bean name="helloWorldForm"
+		type="com.fsa.beans.Message"/>
+	</form-beans>
+	<action-mappings>
+	   <action path="studentAction"
+		type="com.fsa.actions.MessageAction"
+		name="helloWorldForm" input="/index.jsp"  validate="true">
+        <forward name="success" path="/Success.jsp" redirect="true"/>
+        <forward name="failure" path="/Failure.jsp" redirect="true"/>
+	   </action>
+	</action-mappings>
+	 <message-resources parameter="MessageResources"/>
+</struts-config>
