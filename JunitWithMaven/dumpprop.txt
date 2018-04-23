@@ -1,0 +1,5 @@
+inside main method
+Absolute path  E:\OxygenIDEProjects\JunitWithMaven\dbprop.txt
+Conical path  E:\OxygenIDEProjects\JunitWithMaven\dbprop.txt
+Relative Path dbprop.txt
+infile length 0
