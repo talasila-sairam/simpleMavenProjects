@@ -23,28 +23,55 @@
     </resources>
     
     <plugins>
+       <!-- <plugin>
+            <groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.7.6.201602180812</version>
+			<configuration>
+			    <address>192.168.101.33</address>
+			    <port>9000</port>
+			    <reset>false</reset>
+				<destFile>${sonar.jacoco.reportPath}</destFile>
+				<append>true</append>
+			</configuration>
+			<executions>
+				<execution>
+					<id>agent</id>
+					 <phase>test</phase>
+					    <goals>
+						   <goal>prepare-agent</goal>
+						   <goal>report</goal>
+					     </goals>		     
+				</execution>
+			</executions> 
+       </plugin>
+       -->   
+       <!-- Sonar Plugins Goals are sonar:sonar-->
+       <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.4.0.905</version>
+       </plugin>
+       
+       <!-- Jacoco Plugin Goals Are org.jacoco:jacoco-maven-plugin:prepare-agent install -->
        <plugin>
           <groupId>org.jacoco</groupId>
-	<artifactId>jacoco-maven-plugin</artifactId>
-	<version>0.7.6.201602180812</version>
-	<configuration>
-	    <address>192.168.101.33</address>
-	    <port>7997</port>
-	    <reset>false</reset>
-		<destFile>${sonar.jacoco.reportPath}</destFile>
-		<append>true</append>
-	</configuration>
-	<executions>
-		<execution>
-			<id>agent</id>
-			 <phase>test</phase>
-			    <goals>
-				   <goal>prepare-agent</goal>
-				   <goal>report</goal>
-			     </goals>
-			     
-		</execution>
-	</executions>   
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.1</version>
+			 <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
        </plugin>
     </plugins>
     

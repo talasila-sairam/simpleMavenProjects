@@ -1,12 +1,9 @@
 package com.simple.junit;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 
 public class FileReaderTest {
@@ -70,7 +67,7 @@ public static void main(String[] args) throws IOException {
 	File outfile = null;
 	FileInputStream fis = null;
 	try{
-		 infile = new File("src\\main\\resources\\dbprop.txt");
+		 infile = new File("dbprop.txt");
 		 outfile = new File("dumpprop.txt");
 		 fis = new FileInputStream(infile);
 	     System.out.println("Absolute path  "+infile.getAbsolutePath());
