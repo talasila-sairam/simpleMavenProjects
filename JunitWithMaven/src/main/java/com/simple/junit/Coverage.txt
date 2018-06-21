@@ -1,0 +1,24 @@
+We have code coverage tools like jacoco and analysis tools like Sonar Lint
+
+case-1) in this case, suppose it is maven project so we have to run the goals of a plugin
+        if you run jacoco plugin goal(report) will be genrated and placed in the target directory folder
+        this is for code coverage but incase of analysis i.e sonar tool this toll also will have some plugin 
+        and goals. if you run those it will analysis the code and placed inside the SonarQube server. 
+        bydefault it will place bcz it is running under default port i.e 9000 if it is not running under 
+        this port we need to configuration in the remote location server it will displays the code coverage 
+        report and code smells and bugs also when ever you run jacoco plugin it will genrate one jacoco.ece f
+        ile it is in binary format.this file will be place inside of the server and it will displays it
+      
+case-2) In this case if your project is Normal Project you can use the benfits from Eclipse bcz Eclipse is 
+        comming up set of plugins like sonarLint for analysing and jacoco for code coverage. you can apply 
+        this plugins to normal as well as Maven Projects also. it will dispalys the results there itself.
+        but it is for local machine. and more over these are not accurate when compared with SonarQube Server
+        bcz Eclipse provided plugin rules for analysing may be different when compared with SonarQube Server
+        
+case-3)  In this case you can bind your projects to SonarQube projects. for this You have to download 
+         sonar Qube Server as well as Sonar-Scanner and we have to provide some set of properties in 
+         sonar-scanner.properties file means we have to specify the name of the project and version and 
+         key and source location also. this project will have set of rules so the same rules will applicable
+         to our eclipse project even though you are using sonar lint. so you can have same results 
+         in local and SonarQube Server as well
+        
